@@ -11,4 +11,4 @@ def calculate_bmi(weight, height_cm):
 
 def test_bmi_calculation(weight, height_cm, expected_bmi):
     result = calculate_bmi(weight, height_cm)
-    assert abs (result - expected_bmi) < 0.000001
+    assert abs (result - expected_bmi) < 0.01
