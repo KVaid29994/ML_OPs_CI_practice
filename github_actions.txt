@@ -1,0 +1,39 @@
+⚙️ What is GitHub Actions?
+GitHub Actions is a CI/CD tool built into GitHub that lets you automate workflows like testing, building, and deploying code every time you push or pull code. 
+It uses YAML files stored in .github/workflows/.
+
+
+✅ Use Cases:
+- Run tests on each pull request or push 🔁
+- Build and deploy ML models automatically 🤖
+- Lint code and check style 🎨 ###In software development, "lint code" or "linting" refers to the process of automatically checking source code for potential errors, bugs, and stylistic issues using predefined rules.
+- Send alerts or notifications after a job 📢
+
+
+# .github/workflows/main.yml
+name: CI Pipeline
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Tests
+        run: pytest
+🧩 Key Components:
+- on: Triggers (e.g., push, pull_request)
+- jobs: A job contains steps
+- steps: Each command/task to run
+- uses: Prebuilt GitHub Actions (e.g., actions/checkout)
