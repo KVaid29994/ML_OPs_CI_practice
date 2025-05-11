@@ -1,0 +1,14 @@
+🔍 What is pytest?
+pytest is a popular Python testing framework that helps you automate testing of your code.
+It checks whether functions return expected results and alerts you if anything breaks.
+
+Think of it like a proof checker for your code—if your logic is wrong or changes unexpectedly, pytest will catch it.
+
+✅ How pytest Works (Step-by-Step):
+You write test functions (like test_bmi_calculation) using simple assert statements.
+
+pytest runs these functions and compares actual vs expected results.
+
+If the result matches → ✅ test passes
+If not → ❌ test fails and shows why
+
