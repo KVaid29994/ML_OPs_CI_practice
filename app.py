@@ -23,8 +23,8 @@ height = st.number_input("Enter your height (cm):", min_value=100.0, max_value=2
 
 # Calculate BMI
 if weight and height:
-    # bmi = weight / ((height / 100) ** 2)
-    bmi = weight + (height / 100)
+    bmi = weight / ((height / 100) ** 2)
+   
     st.subheader(f"📊 Your BMI: {bmi:.2f}")
 
     # Health category
